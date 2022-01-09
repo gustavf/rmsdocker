@@ -9,6 +9,10 @@ RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
 RUN apt-get install -y tzdata
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 
+#This stops prompting for accepting EULA
+RUN echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
+RUN apt-get install -y --no-install-recommends fontconfig ttf-mscorefonts-installer
+
 #RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 #USER docker
 #CMD /bin/bash
