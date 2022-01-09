@@ -17,4 +17,3 @@ RUN sudo wget https://gist.githubusercontent.com/gustavf/cccd446fcf240dc7538ad91
 RUN sudo wget https://gist.githubusercontent.com/edharman/dc8dc37d5f9216c97c345c6b0abab251/raw/4a11cfbc508eed48ce6143e2b4c50850d393bd7f/opencv4_install.sh
 RUN chmod +x *.sh
 RUN ./install.sh
-
